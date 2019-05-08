@@ -42,7 +42,7 @@ Theta_grad = zeros(size(Theta));
 %
 
 Difference= X*Theta'-Y;
-J= sum(sum((Difference.*R).^2))/2;
+J= sum(sum((Difference(R==1)).^2))/2;
 #Cost with Regulatization
 J = J + lambda*sum(sum(Theta.^2))/2+lambda*sum(sum(X.^2))/2
 
