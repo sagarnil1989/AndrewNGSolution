@@ -52,6 +52,7 @@ pause;
 load ('ex8_movieParams.mat');
 
 %  Reduce the data set size so that this runs faster
+
 num_users = 4; num_movies = 5; num_features = 3;
 X = X(1:num_movies, 1:num_features);
 Theta = Theta(1:num_users, 1:num_features);
@@ -77,6 +78,7 @@ pause;
 fprintf('\nChecking Gradients (without regularization) ... \n');
 
 %  Check gradients by running checkNNGradients
+
 checkCostFunction;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
